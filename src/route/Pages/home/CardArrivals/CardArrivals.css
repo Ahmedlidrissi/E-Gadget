@@ -1,0 +1,57 @@
+.containerCards{
+    display: inline-block;
+    padding: 2px;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    
+      }
+       
+      .card-list{
+        display: inline-block; 
+        width: 250px; 
+        height: auto;
+        border: 1px solid #ccc;
+        position: relative;
+        padding: 16px;
+        margin-right: 16px;  
+    } 
+    .card-list:hover{
+      border-color: rgb(255, 111, 0) solid 20px;
+      } 
+    .tag-container{
+      display: flex;
+      justify-content:initial ;
+      margin-bottom: 8px;
+      }
+      .tag { 
+        font-size: 1.5em;
+        padding: 1px 2px; 
+        border-radius: 4px;
+        margin: 0 10px;
+      }
+      .tag-discount {
+        color: white;
+        background-color: transparent; 
+        background-color: rgb(255, 111, 0);
+        display: flex;
+        margin-bottom: 8px;
+      }
+      
+      .button{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        width: 50%;
+        padding: auto; 
+        color: white;
+        text-align: center;
+        background-color: rgb(255, 111, 0);
+        border-radius: 5px;
+        padding: 15px;
+      }
+      .card-list:hover .button{
+        opacity: 1;
+      }

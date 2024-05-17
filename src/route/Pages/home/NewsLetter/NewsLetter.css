@@ -1,0 +1,46 @@
+.containerNews{
+background-color: #efefef;
+display: flex;
+height: 400px;
+flex-direction: column;
+text-align: center;
+align-items: center;
+position: relative;
+padding-top: 0;
+}
+.dell-image img{
+    width: 478px;
+    height: 400px; 
+    position: absolute;
+    left: -40px;
+    margin-top: 0px;
+
+}
+.contentNews{
+margin-top: 113px;
+
+}
+.phone { 
+    position: absolute; 
+    left: 1028px;
+}
+.phone img{
+    width: 500px;
+    height: 397px;
+}
+.email-input{
+border: none;
+width: 500px;
+height: 20px;
+background: none;
+}
+
+.button-input{
+border: none;
+background: none;
+cursor: pointer;
+color: #6b6a6a;
+}
+.contentNews hr{
+height: 1px;
+}
