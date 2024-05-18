@@ -54,6 +54,9 @@ class userController extends Controller
         'is_Admin' => 'required|max:30',
         'password' => 'required|max:300',
     ]);
+    if ($request->has('password')) {
+      $usersField['password'] = Hash::make($request->input('password'));
+    }
     if($request->hasFile('image')){
       $usersField['PFP']=$request->file('PFP')->store('/users','public');
     }
