@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\DiscountsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +22,8 @@ Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
 Route::apiResource('users', userController::class);
-
+Route::apiResource('categories', CategoriesController::class);
+Route::apiResource('products', ProductsController::class);
+Route::apiResource('discounts', DiscountsController::class);
+Route::apiResource('carts', CartController::class);
 require __DIR__.'/auth.php';
