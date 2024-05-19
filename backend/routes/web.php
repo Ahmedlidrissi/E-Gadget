@@ -1,29 +1,14 @@
 <?php
 
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\userController;
-use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\DiscountsController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
-Route::apiResource('users', userController::class);
-Route::apiResource('categories', CategoriesController::class);
-Route::apiResource('products', ProductsController::class);
-Route::apiResource('discounts', DiscountsController::class);
-Route::apiResource('carts', CartController::class);
-require __DIR__.'/auth.php';
+Route::apiResource('users', UserController::class);
+// Route::apiResource('categories', CategorieController::class);
+// returns the home page with all posts
+Route::get('/categories', CategorieController::class .'@index')->name('categories.index');
+Route::post('/categories', CategorieController::class .'@store')->name('categories.store');
+Route::get('/categories/{categorie}', CategorieController::class.'@show')->name('categories.show');
+Route::put('/categories/{categories}', CategorieController::class .'@update')->name('categories.update');
+Route::delete('/categories/{categories}', CategorieController::class .'@destroy')->name('categories.destroy');

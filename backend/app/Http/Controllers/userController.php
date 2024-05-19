@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class userController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
@@ -55,11 +55,13 @@ class userController extends Controller
         'password' => 'required|max:300',
     ]);
     if ($request->has('password')) {
-      $usersField['password'] = Hash::make($request->input('password'));
-    }
+        $usersField['password'] = Hash::make($request->input('password'));
+      }
+
     if($request->hasFile('image')){
       $usersField['PFP']=$request->file('PFP')->store('/users','public');
     }
+
     $user->update($usersField);
     return response()->json(['updated']);
   }
@@ -74,22 +76,8 @@ class userController extends Controller
     $user->delete();
     return response()->json(['success', 'user deleted successfully']);
           }
-  // routes functions
-  /**
-   * Show the form for creating a new post.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function create()
-  {
-    return view('user.create');
-  }
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
+
+        
   public function show(User $user)
   {
     return response()->json($user);
