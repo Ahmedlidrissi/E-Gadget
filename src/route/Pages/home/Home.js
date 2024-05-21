@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import NewsLetter from "./NewsLetter/NewsLetter";
+import Footer from "../../../footer/footer";
 
 export default function Homepage(imageSrc, imageAlt, title, linkText) {
   const ArrivalsCard= Arrivals.map((item,index)=> 
@@ -82,6 +83,7 @@ export default function Homepage(imageSrc, imageAlt, title, linkText) {
         </div>
       </section>
       <NewsLetter/>
+      <Footer/>
     </div>
     </>
   );

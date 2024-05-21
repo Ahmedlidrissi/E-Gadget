@@ -74,7 +74,8 @@
     letter-spacing: -0.4px;
     line-height: 28px;
     margin-top: 12px;
-    border-bottom: 1px solid #fd5b00;
+    border-bottom: 0px solid;
+    text-decoration: underline;
   }
 
   .product-card__link-text {

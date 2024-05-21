@@ -5,6 +5,7 @@ import Homepage from "./Pages/home/Home";
 import Shop from "./Pages/Shop";
 import Contact from "./Pages/Contact";
 import Product from "./Pages/Product";
+import Landing from "./Pages/landing page/landing";
 export default function Navigation(){
 return(
 <div className="Container">
@@ -15,7 +16,7 @@ return(
           <Route path="Shop" element={<Shop/>} />
           <Route path="Product" element={<Product/>} />
           <Route path="contact" element={<Contact/>} />
-          <Route path="*" element={""} />
+          <Route path="*" element={<Landing/>} />
         </Route>
       </Routes>
     </BrowserRouter>
