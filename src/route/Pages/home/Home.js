@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Footer from "../../../footer/footer";
+import Navigation from "../../Navigation";
 
 export default function Homepage(imageSrc, imageAlt, title, linkText) {
   const ArrivalsCard= Arrivals.map((item,index)=> 
@@ -29,7 +30,6 @@ export default function Homepage(imageSrc, imageAlt, title, linkText) {
     <>
     <div>
       <main className="main-container">
-        
         <div className="hero-section">
           <SliderComponent/>
           <div className="hero-content">

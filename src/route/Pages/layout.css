@@ -1,49 +1,50 @@
 .container {
-    display: flex;
-    padding: 10px;
-  }
-  
-  .logo {
-    display: flex;
-    margin: 0 150px; /* Add spacing between logo and links */
-  }
-  
-  .img {
-    width: auto; /* Adjust the width as needed */
-    height: 50px; /* Maintain aspect ratio */
-  }
-  
-  .nav-links ul {
-    list-style-type: none;
-    margin: 0 100px;
-    text-align: center;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav-links li {
-    justify-content: center; /* Center the items horizontally */
-    margin-right: 80px;
-  }
-  
-  .nav-links li a {
-    color: rgb(255, 111, 0); /* Link text color */
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition on hover */
-  }
-  
-  .nav-links li a:hover {
-    color: #333; /* Hover color */
-  }
-  .search-icon  {
-    color:  #ff6f00;
-    background-color: transparent;
-    align-content: center;
-    cursor: pointer;
-    outline: none;
-    padding-left: 70px;
-  }
-  
-  .search-icon :hover {
-    color: #333; /* Change color on hover */
-  }
+  display: flex;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  margin: 0 150px; /* Add spacing between logo and links */
+}
+
+.img {
+  width: auto; /* Adjust the width as needed */
+  height: 50px; /* Maintain aspect ratio */
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin: 0 100px;
+  text-align: center;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  justify-content: center; /* Center the items horizontally */
+  margin-right: 80px;
+}
+
+.nav-links li a {
+  color: rgb(255, 111, 0); /* Link text color */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-links li a:hover {
+  color: #333; /* Hover color */
+}
+
+.search-icon {
+  color: #ff6f00;
+  background-color: transparent;
+  align-content: center;
+  cursor: pointer;
+  outline: none;
+  padding-left: 70px;
+}
+
+.search-icon:hover {
+  color: #333; /* Change color on hover */
+}

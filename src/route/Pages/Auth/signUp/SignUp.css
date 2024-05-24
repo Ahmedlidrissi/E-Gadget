@@ -1,0 +1,101 @@
+
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.container-signUp{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.container-signUp .image-signup{
+background-color: #eee;
+
+}
+.container-signUp .image-signup .logo{
+width: 200px;
+padding-left: 200px;
+margin: 20px;
+}
+.laptop{
+width: 650px;
+height: auto;
+max-width: 650px;
+max-height: max-content;
+}
+.content_Sign{
+margin: 100px 50px;
+color: #565555;
+flex: 1;
+}
+ #logoName{
+margin: 0 50px;
+font-size: 3em; /* Adjust size as needed */
+font-weight: bold;
+background: linear-gradient(to right, #ff8903, #fd5c00);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text; /* Standard property for Firefox */
+color: transparent; /* Make the text color transparent */
+text-align: center;
+}
+.Sign_info h3{
+    font-size: 3em; /* Adjust size as needed */
+font-weight: bold;
+background: linear-gradient(to right, #ff8903, #fd5c00);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text; /* Standard property for Firefox */
+color: transparent; /* Make the text color transparent */
+margin: 15px;
+}
+.Sign_info p input{
+cursor: pointer;
+}
+
+.Sign_info input{
+border: 0;
+background: none;
+font-size: 1em; /* Adjust size as needed */
+font-weight: bold;
+background: linear-gradient(to right, #ff8903, #fd5c00);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text; /* Standard property for Firefox */
+color: transparent; /* Make the text color transparent */
+margin: 10px;
+}
+
+.formulaire input{
+width: 100%;   
+border: 0; 
+margin-bottom: 30px;
+border-bottom:1px solid #565555 ;
+outline: none;
+}
+.btn-submit{
+width: 100%;
+border: none;
+margin: 10px;
+padding: 15px;
+background: linear-gradient(to right, #ff8903, #fd5c00);
+color: #eee;
+text-align: center;
+border-radius: 15px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+cursor: pointer;
+}
+.check{
+    font-size: 1em; /* Adjust size as needed */
+    font-weight: bold;
+    background: linear-gradient(to right, #ff8903, #fd5c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Standard property for Firefox */
+    color: transparent; /* Make the text color transparent */
+    box-decoration-break: orange;
+}
+label span{
+cursor: pointer;
+}
