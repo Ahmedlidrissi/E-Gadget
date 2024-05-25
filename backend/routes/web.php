@@ -1,17 +1,23 @@
 <?php
 
 use App\Http\Controllers\CategorieController;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
 Route::apiResource('users', UserController::class);
-Route::apiResource('products', ProductsController::class);
-
-
-
-
-
+Route::apiResource('products', ProductController::class);
 
 
 

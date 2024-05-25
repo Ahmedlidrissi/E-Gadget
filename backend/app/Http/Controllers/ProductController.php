@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Products;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreProductsRequest;
-use App\Http\Requests\UpdateProductsRequest;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     public function index()
     {
-      $Products = Products::all();
-      return response()->json($Products);
+      $Product = Product::all();
+      return response()->json($Product);
     }
   /**
    * Store a newly created resource in storage.
@@ -30,7 +30,7 @@ class ProductsController extends Controller
         'categorie' => 'required|max:50',
       ]);
       $Field['image'] = $request->file('image')->store('/products','public');
-      Products::create($Field);
+      Product::create($Field);
       return response()->json(['created']);
     }
   /**
@@ -40,7 +40,7 @@ class ProductsController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Products $Product)
+  public function update(Request $request, Product $Product)
   {
     $Field = $request->validate([
         'description' => 'required',
@@ -62,14 +62,14 @@ class ProductsController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy(Products $Product)
+  public function destroy(Product $Product)
   {
     $Product->delete();
     return response()->json(['success', 'Product deleted successfully']);
           }
 
         
-  public function show(Products $Product)
+  public function show(Product $Product)
   {
     return response()->json($Product);
   }

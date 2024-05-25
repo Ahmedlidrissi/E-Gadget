@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Categorie;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreCategorieRequest;
-use App\Http\Requests\UpdateCategorieRequest;
 
 class CategorieController extends Controller
 {
