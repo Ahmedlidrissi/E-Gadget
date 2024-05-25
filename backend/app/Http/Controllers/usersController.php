@@ -6,7 +6,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+<<<<<<< HEAD:backend/app/Http/Controllers/usersController.php
 class usersController extends Controller
+=======
+class UserController extends Controller
+>>>>>>> 130e42ceb2110bc15a55a0c7ac3fd0a6b1055e16:backend/app/Http/Controllers/userController.php
 {
     public function index()
     {
