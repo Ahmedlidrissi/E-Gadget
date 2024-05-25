@@ -10,7 +10,7 @@ class Categorie extends Model
 {
     use HasFactory;
     public function products() : BelongsTo {
-        return $this->belongsTo(Products::class);
+        return $this->belongsTo(Product::class);
     }
     protected $fillable = [
         'categorie'

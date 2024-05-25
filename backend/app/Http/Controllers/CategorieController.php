@@ -57,6 +57,6 @@ class CategorieController extends Controller
         
   public function show($id)
   {
-    return response()->json(Categorie::find($id));
+    return response()->json(Categorie::findOrFail($id));
   }
 }
