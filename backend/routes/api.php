@@ -2,7 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +21,18 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::apiResource('users', UserController::class);
+Route::apiResource('products', ProductController::class);
+Route::apiResource('clients',ClientController::class);
+Route::apiResource('reviews',ReviewController::class);
+
+
+// rcategorie routs
+Route::get('/categories', CategorieController::class .'@index')->name('categories.index');
+Route::post('/categories', CategorieController::class .'@store')->name('categories.store');
+Route::get('/categories/{categorie}', CategorieController::class.'@show')->name('categories.show');
+Route::put('/categories/{categories}', CategorieController::class .'@update')->name('categories.update');
+Route::delete('/categories/{categories}', CategorieController::class .'@destroy')->name('categories.destroy');
+// rcategorie routs
