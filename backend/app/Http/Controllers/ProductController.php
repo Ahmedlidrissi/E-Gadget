@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Http\Client\Request;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -25,11 +25,12 @@ class ProductController extends Controller
         'productName' => 'required|max:60',
         'description' => 'required',
         'price' => 'required|max:10',
-        'image' => 'required|max:3200',
+        'image' => 'required',
         'stock' => 'required|max:10',
-        'categorie' => 'required|max:50',
+        'categorie' => '',
       ]);
-      $Field['image'] = $request->file('image')->store('/products','public');
+      //$usersField['PFP'] = $request->file('PFP')->store('/users','public');
+      $Field['image'] = $request->file('image')->store('/products','/public');
       Product::create($Field);
       return response()->json(['created']);
     }
