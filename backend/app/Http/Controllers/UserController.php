@@ -30,6 +30,7 @@ class UserController extends Controller
         'is_Admin' => 'required|max:30',
         'password' => 'required|max:300',
       ]);
+      //$usersField['PFP'] = $request->file('PFP')->store('/users','public');
       $usersField['PFP'] = $request->file('PFP')->store('/users','public');
       $usersField['password']=Hash::make($request->password);
       User::create($usersField);

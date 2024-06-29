@@ -1,0 +1,47 @@
+.card-list-container {
+    display: flex; /* Display cards in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding:0 10px; /* Padding around the card list */
+    margin: 70px;
+  }
+  
+  .card-listValue {
+    width: 962px; /* Set card width */
+    height: 220px;
+    background-color: #efefef; /* White background color for each card */
+    margin-right: 30px; /* Margin between cards */
+  }
+  
+  .icon {
+    color: #fc7303;
+    text-align: center; /* Center icon horizontally */
+    margin-top: 30px ; /* Margin around the icon */
+    margin-left: -192px;
+    margin-bottom: 20px;
+    width: auto;
+    height: 20px;
+  }
+.icon svg{
+    width: auto;
+    height: 30px;
+}
+  
+  .contentValue {
+    padding: 0 16px; /* Padding around title and description */
+  }
+  
+  .title {
+    font-size: 18px; /* Font size for title */
+    font-weight: bold; /* Bold font for title */
+    margin-bottom: 8px; /* Margin between title and description */
+  }
+  
+  .description {
+    font-size: 14px; /* Font size for description */
+    color: #666; /* Color for description */
+  }
+  h2.title {
+    font-size: 50px;
+}
+  
+  

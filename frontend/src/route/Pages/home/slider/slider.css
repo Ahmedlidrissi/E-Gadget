@@ -1,0 +1,35 @@
+/* Slider.css */
+.slider-container {
+  width: 100%;
+
+}
+
+.slider-image {
+  width: 100%;
+}
+
+.slick-slide {
+  display: inline-block !important; /* Ensure slides are displayed inline */
+  margin: 10px; /* Adjust margin between slides */
+
+}
+.slider-container {
+  width: auto;
+  
+}
+
+.slider-image {
+  border: solid 2px rgba(253, 91, 0, 1);
+  margin-left: 70px;
+  width: 1000px; /* Make images fill their parent container */
+  height: 500px; /* Maintain aspect ratio */
+  max-width: auto; /* Set maximum width for images */
+}
+
+.slick-slide {
+  display: inline-block !important; /* Ensure slides are displayed inline */
+  margin: 0; /* Adjust margin between slides */
+  margin-bottom: 0;
+
+}
+
