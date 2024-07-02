@@ -8,6 +8,12 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\CustomerServiceController;
+use App\Http\Controllers\DiscountsController;
+use App\Http\Controllers\OrderTrakingController;
+use App\Http\Controllers\PurchaseGideController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,7 +34,13 @@ Route::apiResource('users', UserController::class);
 Route::apiResource('products', ProductController::class);
 Route::apiResource('clients',ClientController::class);
 Route::apiResource('reviews',ReviewController::class);
-//Route::apiResource('contacts',ContactController::class);
+Route::apiResource('about',AboutController::class);
+Route::apiResource('blogs',BlogsController::class);
+Route::apiResource('services',CustomerServiceController::class);
+Route::apiResource('discounts',DiscountsController::class);
+Route::apiResource('orders',OrderTrakingController::class);
+Route::apiResource('contacts',ContactController::class);
+Route::apiResource('gides',PurchaseGideController::class);
 
 
 // rcategorie routs
