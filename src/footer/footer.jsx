@@ -17,7 +17,7 @@ export default function Footer() {
             <Link to="/"><h5>Home</h5></Link>
           </li>
           <li>
-            <Link to="/Shop"><h5>Shop</h5></Link>
+            <Link to="/About"><h5>About</h5></Link>
           </li>
           <li>
             <Link to="/Product"><h5>Product</h5></Link>

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Footer from "../../../footer/footer";
-import Navigation from "../../Navigation";
+
 
 export default function Homepage(imageSrc, imageAlt, title, linkText) {
   const ArrivalsCard= Arrivals.map((item,index)=> 
@@ -60,7 +60,11 @@ export default function Homepage(imageSrc, imageAlt, title, linkText) {
           New <br /> Arrivals
         </h2>
         <div className="more-products">
-          <span className="more-products-text">More Products</span>
+          <span className="more-products-text">
+          <Link to="/product" className="product-card__link-text">
+            More Products
+          </Link>
+          </span>
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/6f440ee4394e89c3528436a674fa603e29ca3b941b06a7f9844f2cd91c8b6389?apiKey=c261b1132bd3471985b2b833c77deb73&"
