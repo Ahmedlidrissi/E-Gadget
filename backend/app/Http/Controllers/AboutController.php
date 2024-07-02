@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\contact;
+use App\Models\About;
 use Illuminate\Http\Request;
-use App\Http\Requests\StorecontactRequest;
-use App\Http\Requests\UpdatecontactRequest;
+use App\Http\Requests\StoreAboutRequest;
+use App\Http\Requests\UpdateAboutRequest;
 
-class ContactController extends Controller
+class AboutController extends Controller
 {
     public function index()
     {
-      $Contacts = contact::all();
-      return response()->json($Contacts);
+      $About = About::all();
+      return response()->json($About);
     }
   /**
    * Store a newly created resource in storage.
@@ -22,11 +22,11 @@ class ContactController extends Controller
    */
   public function store(Request $request){
       $Field = $request->validate([
-        'name' => 'required|max:30',
-        'email' => 'required|max:50',
-        'message' => 'required'
+        'histroy' => 'required',
+        'Missions_and_values' => 'required',
+        'Social_and_environmental_commitments' => 'required'
       ]);
-      contact::create($Field);
+      About::create($Field);
       return response()->json(['created']);
     }
   /**
@@ -36,15 +36,15 @@ class ContactController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, contact $Contact)
+  public function update(Request $request, About $About)
   {
     $Field = $request->validate([
-      'name' => 'required|max:30',
-      'email' => 'required|max:50',
-      'message' => 'required'
+        'histroy' => 'required',
+        'Missions_and_values' => 'required',
+        'Social_and_environmental_commitments' => 'required'
     ]);
 
-    $Contact->update($Field);
+    $About->update($Field);
     return response()->json(['updated']);
   }
   /**
@@ -53,15 +53,15 @@ class ContactController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy(contact $Contacts)
+  public function destroy(About $Abouts)
   {
-    $Contacts->delete();
-    return response()->json(['success', 'Contacts deleted successfully']);
+    $Abouts->delete();
+    return response()->json(['success', 'About deleted successfully']);
           }
 
         
-  public function show(contact $Contacts)
+  public function show(About $Abouts)
   {
-    return response()->json($Contacts);
+    return response()->json($Abouts);
   }
 }
